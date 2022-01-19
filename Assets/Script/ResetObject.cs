@@ -60,7 +60,6 @@ public class ResetObject : MonoBehaviour
             if(Ball.nblance  == 2)
             {
                 resetTransform();
-                GameManager.Instance.ResetChecks();
                 
             }
         }
