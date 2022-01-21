@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
 
     private void UpdateUI()
     {
-        quilleDown.text = "" + _count;
+        quilleDown.text = "" + count;
     }
 
     public int Result( int numberParty, int count)
@@ -63,14 +63,16 @@ public class GameManager : MonoBehaviour
         return ResultParty;
     }
 
-    public void ResetChecks()
+      public void ResetGame() 
     {
-        for (int i = 0; i < 10; ++i)
+        for (int q = 0; q < Quilles.Count; ++q)
         {
-            //Quilles[i].enableCheck = false;
-            Quilles[i].gameObject.SetActive(!Quilles[i].isDown);
+            Quilles[q].ResetStatus();
         }
+        count = 0;
+        UpdateUI();
     }
+
 
     // Start is called before the first frame update
     void Start()

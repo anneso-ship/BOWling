@@ -5,46 +5,36 @@ using UnityEngine;
 using UnityEngine.UI;
 public class quilles : MonoBehaviour
 {
-    Vector3[] defaultPos;
-    Quaternion[] defaultRot;
-    Transform[] models;
+    private Material _mat;
+    private Vector3 _startPosition;
+    private bool enableCheck;
+    private Rigidbody _rb;
 
-    public int nbQuille;
-    
-    public GameManager gameManage;
-    public balle Ball;
-
-
-    public bool enableCheck;
-    public Material mat;
-    public bool isDown;
-
-
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        mat = GetComponent<Renderer>().material;
+        //Récupération des références
+        _mat = GetComponent<Renderer>().material;
+        _startPosition = transform.position;
+        _rb = GetComponent<Rigidbody>();
+
+        //Singleton, c'est un peu complexe mais en gros tu ne dois avoir qu'un seul GameManager dans ton jeu. De mauvaises choses vont se passer sinon.
         GameManager.Instance.Quilles.Add(this);
-        
     }
 
-  
-
-   
-
-    private void OnCollisionEnter(Collision collision)
+    public void ResetStatus()
     {
-        //Ajouter le tag "Ball" à la boule et "Quille" aux quilles
-        enableCheck = collision.gameObject.CompareTag("Ball") || collision.gameObject.CompareTag("Quille") || collision.gameObject.CompareTag("bloc8")  ;
+        _rb.velocity = Vector3.zero;
+        _rb.angularVelocity = Vector3.zero;
+        transform.SetPositionAndRotation(_startPosition, Quaternion.identity); //Ne pas utiliser transform.position et transform.rotation, cette ligne est plus optimisée
+        _mat.SetColor("_Color", Color.white);
+        enableCheck = false;
+        this.enabled = true;
+        gameObject.SetActive(true);
     }
 
-    
-
-    void FixedUpdate()
+    public void Update()
     {
-        
-        if (!enableCheck)
+        if (!enableCheck) //on veut éviter de calculer le Vector3.dot à chaque frame pour chaque quille, on ne va vérifier que les quilles qui ont été touchée par la boule ou une autre quille.
             return;
 
         /*Si le modèle de la quille est correctement fait son Up (flèche verte) pointe vers le haut.
@@ -54,15 +44,22 @@ public class quilles : MonoBehaviour
        */
         if (Vector3.Dot(transform.up, Vector3.up) < 0.95)
         {
-            GameManager.Instance.count++;
-            mat.SetColor("_Color", Color.green);
-            isDown = true;
-            this.enabled = false;
+            GameManager.Instance.count++; //on ajoute 1 au compteur de quilles couchées
+            _mat.SetColor("_Color", Color.green);
+
+            this.enabled = false; //La quille est maintenant couchée, on arrête complètement le script, il n'est plus utile.
         }
-        
-
-
     }
 
-    
+
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        //Ajouter le tag "Ball" à la boule et "Quille" aux quilles
+        enableCheck = collision.gameObject.CompareTag("Ball") || collision.gameObject.CompareTag("Quille") || collision.gameObject.CompareTag("bloc8");
+    }
+
+
+
 }
