@@ -5,17 +5,17 @@ using UnityEngine;
 using UnityEngine.UI;
 public class quilles : MonoBehaviour
 {
-    private Material _mat;
+    public Material _mat;
     private Vector3 _startPosition;
     private bool enableCheck;
-    private Rigidbody _rb;
+    //public Rigidbody _rb;
 
     private void Start()
     {
         //Récupération des références
         _mat = GetComponent<Renderer>().material;
         _startPosition = transform.position;
-        _rb = GetComponent<Rigidbody>();
+       // _rb = GetComponent<Rigidbody>();
 
         //Singleton, c'est un peu complexe mais en gros tu ne dois avoir qu'un seul GameManager dans ton jeu. De mauvaises choses vont se passer sinon.
         GameManager.Instance.Quilles.Add(this);
@@ -23,8 +23,8 @@ public class quilles : MonoBehaviour
 
     public void ResetStatus()
     {
-        _rb.velocity = Vector3.zero;
-        _rb.angularVelocity = Vector3.zero;
+       // _rb.velocity = Vector3.zero;
+        //_rb.angularVelocity = Vector3.zero;
         transform.SetPositionAndRotation(_startPosition, Quaternion.identity); //Ne pas utiliser transform.position et transform.rotation, cette ligne est plus optimisée
         _mat.SetColor("_Color", Color.white);
         enableCheck = false;
