@@ -5,6 +5,7 @@ ScriptsOnlyBuild:
     - GameManager
     - GameOptions
     - ResetObject
+    - Scorer
     - balle
     - quilles
     Unity.RenderPipelines.Core.Runtime.dll:
@@ -149,43 +150,45 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3592}
     - Class: 114
-      Script: {instanceID: 3754}
+      Script: {instanceID: 3618}
     - Class: 114
-      Script: {instanceID: 3792}
+      Script: {instanceID: 3756}
     - Class: 114
-      Script: {instanceID: 3822}
+      Script: {instanceID: 3794}
     - Class: 114
-      Script: {instanceID: 3902}
+      Script: {instanceID: 3824}
     - Class: 114
-      Script: {instanceID: 3906}
+      Script: {instanceID: 3904}
     - Class: 114
-      Script: {instanceID: 3970}
+      Script: {instanceID: 3908}
     - Class: 114
       Script: {instanceID: 3972}
     - Class: 114
-      Script: {instanceID: 4054}
+      Script: {instanceID: 3974}
     - Class: 114
-      Script: {instanceID: 4084}
+      Script: {instanceID: 4056}
     - Class: 114
-      Script: {instanceID: 4250}
+      Script: {instanceID: 4086}
     - Class: 114
-      Script: {instanceID: 4666}
+      Script: {instanceID: 4252}
     - Class: 114
-      Script: {instanceID: 4818}
+      Script: {instanceID: 4668}
     - Class: 114
-      Script: {instanceID: 4872}
+      Script: {instanceID: 4820}
     - Class: 114
-      Script: {instanceID: 5136}
+      Script: {instanceID: 4874}
     - Class: 114
-      Script: {instanceID: 5244}
+      Script: {instanceID: 5138}
     - Class: 114
-      Script: {instanceID: 5290}
+      Script: {instanceID: 5246}
     - Class: 114
-      Script: {instanceID: 5644}
+      Script: {instanceID: 5292}
     - Class: 114
-      Script: {instanceID: 5954}
+      Script: {instanceID: 5646}
     - Class: 114
-      Script: {instanceID: 18670}
+      Script: {instanceID: 5956}
+    - Class: 114
+      Script: {instanceID: 18788}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -563,6 +566,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ToggleGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 41c6bcefb590e491cd2227507f091e4a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Scorer
   - hash:
       serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a

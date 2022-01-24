@@ -55,29 +55,37 @@ public class Scorer : MonoBehaviour
         if (Ball.party == 2 && Ball.frame == 2 && Ball.nblance == 1) { frameRes[2] = GameManager.Instance.count; }
         if (Ball.party == 3 && Ball.frame == 2 && Ball.nblance == 2) { frameRes[3] = GameManager.Instance.count; }
 
-        /*if (Ball.party == 4 && Ball.frame == 3) { frameRes[4] = GameManager.Instance.count; }
-        if (Ball.party == 5 && Ball.frame == 3) { frameRes[5] = GameManager.Instance.count; }
+        //F3 Résultats :
+        if (Ball.party == 4 && Ball.frame == 3 && Ball.nblance == 1) { frameRes[4] = GameManager.Instance.count; }
+        if (Ball.party == 5 && Ball.frame == 3 && Ball.nblance == 2) { frameRes[5] = GameManager.Instance.count; }
 
-        if (Ball.party == 6 && Ball.frame == 4) { frameRes[6] = GameManager.Instance.count; }
-        if (Ball.party == 7 && Ball.frame == 4) { frameRes[7] = GameManager.Instance.count; }
+        //F4 Résultats :
+        if (Ball.party == 6 && Ball.frame == 4 && Ball.nblance == 1) { frameRes[6] = GameManager.Instance.count; }
+        if (Ball.party == 7 && Ball.frame == 4 && Ball.nblance == 2) { frameRes[7] = GameManager.Instance.count; }
 
-        if (Ball.party == 8 && Ball.frame == 5) { frameRes[8] = GameManager.Instance.count; }
-        if (Ball.party == 9 && Ball.frame == 5) { frameRes[9] = GameManager.Instance.count; }
+        //F5 Résultats :
+        if (Ball.party == 8 && Ball.frame == 5 && Ball.nblance == 1) { frameRes[8] = GameManager.Instance.count; }
+        if (Ball.party == 9 && Ball.frame == 5 && Ball.nblance == 2) { frameRes[9] = GameManager.Instance.count; }
 
-        if (Ball.party == 10 && Ball.frame == 6) { frameRes[10] = GameManager.Instance.count; }
-        if (Ball.party == 11 && Ball.frame == 6) { frameRes[11] = GameManager.Instance.count; }
+        //F6 Résultats :
+        if (Ball.party == 10 && Ball.frame == 6 && Ball.nblance == 1) { frameRes[10] = GameManager.Instance.count; }
+        if (Ball.party == 11 && Ball.frame == 6 && Ball.nblance == 2) { frameRes[11] = GameManager.Instance.count; }
 
-        if (Ball.party == 12 && Ball.frame == 7) { frameRes[12] = GameManager.Instance.count; }
-        if (Ball.party == 13 && Ball.frame == 7) { frameRes[13] = GameManager.Instance.count; }
+        //F7 Résultats :
+        if (Ball.party == 12 && Ball.frame == 7 && Ball.nblance == 1) { frameRes[12] = GameManager.Instance.count; }
+        if (Ball.party == 13 && Ball.frame == 7 && Ball.nblance == 2) { frameRes[13] = GameManager.Instance.count; }
 
-        if (Ball.party == 14 && Ball.frame == 8) { frameRes[14] = GameManager.Instance.count; }
-        if (Ball.party == 15 && Ball.frame == 8) { frameRes[15] = GameManager.Instance.count; }
+        //F8 Résultats :
+        if (Ball.party == 14 && Ball.frame == 8 && Ball.nblance == 1) { frameRes[14] = GameManager.Instance.count; }
+        if (Ball.party == 15 && Ball.frame == 8 && Ball.nblance == 2) { frameRes[15] = GameManager.Instance.count; }
 
-        if (Ball.party == 16 && Ball.frame == 9) { frameRes[16] = GameManager.Instance.count; }
-        if (Ball.party == 17 && Ball.frame == 9) { frameRes[17] = GameManager.Instance.count; }
+        //F9 Résultats :
+        if (Ball.party == 16 && Ball.frame == 9 && Ball.nblance == 1) { frameRes[16] = GameManager.Instance.count; }
+        if (Ball.party == 17 && Ball.frame == 9 && Ball.nblance == 2) { frameRes[17] = GameManager.Instance.count; }
 
-        if (Ball.party == 18 &&  Ball.frame == 10) { frameRes[18] = GameManager.Instance.count; }
-        if (Ball.party == 19 && Ball.frame == 10) { frameRes[19] = GameManager.Instance.count; }*/
+        //F10 Résultats :
+        if (Ball.party == 18 &&  Ball.frame == 10 && Ball.nblance == 1) { frameRes[18] = GameManager.Instance.count; }
+        if (Ball.party == 19 && Ball.frame == 10 && Ball.nblance == 2) { frameRes[19] = GameManager.Instance.count; }
     }
 
     // Update is called once per frame
