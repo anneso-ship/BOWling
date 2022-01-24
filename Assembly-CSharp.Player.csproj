@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{698C6EBB-8DD1-86E2-6EAE-8A9642DD7327}</ProjectGuid>
+    <ProjectGuid>{9D8A7C7E-3504-B2E1-97CB-D68F8080AAF6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -59,6 +59,7 @@
     <Compile Include="Assets\Script\GameManager.cs" />
     <Compile Include="Assets\Script\quilles.cs" />
     <Compile Include="Assets\Script\balle.cs" />
+    <Compile Include="Assets\Script\Scorer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -637,27 +638,27 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
-      <Project>{7A054293-8D98-E771-B2BA-E031C8F559AF}</Project>
+      <Project>{E8E3C258-FA86-8099-A8D0-09C21AA0118B}</Project>
       <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.csproj">
-      <Project>{1FDBBD8C-21F2-6515-9EF7-77A665515B23}</Project>
+      <Project>{96ECD330-ED9D-5773-2B31-CA0A567B4BB9}</Project>
       <Name>Unity.Timeline</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.csproj">
-      <Project>{0868E00D-F47A-3B39-904E-0A9463133244}</Project>
+      <Project>{F864C847-E74C-252A-DA62-1BFC57742DD0}</Project>
       <Name>Unity.TextMeshPro</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
-      <Project>{3E9EC121-963A-8F2D-2A19-FA1B9BBE6A61}</Project>
+      <Project>{F073C51A-F0E6-A5DE-6B2A-487CCF3DBD26}</Project>
       <Name>Unity.RenderPipelines.Core.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.csproj">
-      <Project>{A493FCE0-6F99-3B53-DEE0-A03B2CB9AD5E}</Project>
+      <Project>{84AD4D38-C82D-DCBE-2F8D-A0F61DD39797}</Project>
       <Name>Unity.RenderPipelines.Core.ShaderLibrary</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{5CE5CC2C-E18C-93AF-62A9-4C89408E3C8B}</Project>
+      <Project>{66EC1AFC-BB0E-0883-EFF8-A664AA510BB3}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
   </ItemGroup>

@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 18318622}
   - component: {fileID: 18318621}
   m_Layer: 5
-  m_Name: lancer1
+  m_Name: f7lancer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 24166904}
   - component: {fileID: 24166903}
   m_Layer: 5
-  m_Name: lancer2
+  m_Name: f5lancer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -451,7 +451,7 @@ GameObject:
   - component: {fileID: 41432524}
   - component: {fileID: 41432523}
   m_Layer: 5
-  m_Name: lancer2
+  m_Name: f7lancer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -746,7 +746,7 @@ GameObject:
   - component: {fileID: 95090197}
   - component: {fileID: 95090196}
   m_Layer: 5
-  m_Name: lancer1
+  m_Name: f1lancer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1562,7 +1562,7 @@ GameObject:
   - component: {fileID: 173234021}
   - component: {fileID: 173234020}
   m_Layer: 5
-  m_Name: lancer2
+  m_Name: f4lancer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2195,7 +2195,7 @@ GameObject:
   - component: {fileID: 276840047}
   - component: {fileID: 276840046}
   m_Layer: 5
-  m_Name: lancer2
+  m_Name: f2lancer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3056,7 +3056,7 @@ GameObject:
   - component: {fileID: 385417548}
   - component: {fileID: 385417547}
   m_Layer: 5
-  m_Name: lancer2
+  m_Name: f10lancer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3371,7 +3371,7 @@ GameObject:
   - component: {fileID: 411838623}
   - component: {fileID: 411838622}
   m_Layer: 5
-  m_Name: lancer2
+  m_Name: f1lancer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4033,7 +4033,7 @@ GameObject:
   - component: {fileID: 503984708}
   - component: {fileID: 503984707}
   m_Layer: 5
-  m_Name: lancer1
+  m_Name: f10lancer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5622,7 +5622,7 @@ GameObject:
   - component: {fileID: 790558052}
   - component: {fileID: 790558051}
   m_Layer: 5
-  m_Name: lancer1
+  m_Name: f6lancer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6430,7 +6430,7 @@ GameObject:
   - component: {fileID: 882846684}
   - component: {fileID: 882846683}
   m_Layer: 5
-  m_Name: lancer2
+  m_Name: f9lancer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8009,7 +8009,7 @@ GameObject:
   - component: {fileID: 1226323271}
   - component: {fileID: 1226323270}
   m_Layer: 5
-  m_Name: lancer3
+  m_Name: f10lancer3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9397,7 +9397,7 @@ GameObject:
   - component: {fileID: 1456388039}
   - component: {fileID: 1456388038}
   m_Layer: 5
-  m_Name: lancer1
+  m_Name: f9lancer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9977,7 +9977,7 @@ GameObject:
   - component: {fileID: 1510221588}
   - component: {fileID: 1510221587}
   m_Layer: 5
-  m_Name: lancer2
+  m_Name: f3lancer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10057,7 +10057,7 @@ GameObject:
   - component: {fileID: 1514231143}
   - component: {fileID: 1514231142}
   m_Layer: 5
-  m_Name: lancer1
+  m_Name: f2lancer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10611,7 +10611,7 @@ GameObject:
   - component: {fileID: 1679288185}
   - component: {fileID: 1679288184}
   m_Layer: 5
-  m_Name: lancer2
+  m_Name: f8lancer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10691,7 +10691,7 @@ GameObject:
   - component: {fileID: 1687637924}
   - component: {fileID: 1687637923}
   m_Layer: 5
-  m_Name: lancer1
+  m_Name: f4lancer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10769,6 +10769,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1687861383}
   - component: {fileID: 1687861382}
+  - component: {fileID: 1687861384}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -10810,6 +10811,41 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1687861384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687861381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2faa5e20befb654fa7d714f5b2c73a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frameRes: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  Ball: {fileID: 1293533700}
+  f1lance_1: {fileID: 95090196}
+  f1lance_2: {fileID: 411838622}
+  f2lance_1: {fileID: 1514231142}
+  f2lance_2: {fileID: 276840046}
+  f3lance_1: {fileID: 2121263827}
+  f3lance_2: {fileID: 1510221587}
+  f4lance_1: {fileID: 1687637923}
+  f4lance_2: {fileID: 173234020}
+  f5lance_1: {fileID: 1732463193}
+  f5lance_2: {fileID: 24166903}
+  f6lance_1: {fileID: 790558051}
+  f6lance_2: {fileID: 2109076988}
+  f7lance_1: {fileID: 18318621}
+  f7lance_2: {fileID: 41432523}
+  f8lance_1: {fileID: 2080899393}
+  f8lance_2: {fileID: 1679288184}
+  f9lance_1: {fileID: 1456388038}
+  f9lance_2: {fileID: 882846683}
+  f10lance_1: {fileID: 503984707}
+  f10lance_2: {fileID: 385417547}
+  f10lance_3: {fileID: 1226323270}
 --- !u!1 &1699093281
 GameObject:
   m_ObjectHideFlags: 0
@@ -11279,7 +11315,7 @@ GameObject:
   - component: {fileID: 1732463194}
   - component: {fileID: 1732463193}
   m_Layer: 5
-  m_Name: lancer1
+  m_Name: f5lancer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13717,7 +13753,7 @@ GameObject:
   - component: {fileID: 2080899394}
   - component: {fileID: 2080899393}
   m_Layer: 5
-  m_Name: lancer1
+  m_Name: f8lancer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13797,7 +13833,7 @@ GameObject:
   - component: {fileID: 2109076989}
   - component: {fileID: 2109076988}
   m_Layer: 5
-  m_Name: lancer2
+  m_Name: f6lancer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13877,7 +13913,7 @@ GameObject:
   - component: {fileID: 2121263828}
   - component: {fileID: 2121263827}
   m_Layer: 5
-  m_Name: lancer1
+  m_Name: f3lancer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
