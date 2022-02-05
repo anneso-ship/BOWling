@@ -5,9 +5,12 @@ using UnityEngine.UI;
 
 public class Scorer : MonoBehaviour
 {
+    public Frame[] frames = new Frame[10];
+
     public int[] frameRes = new int[20] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     public balle Ball;
 
+    
     //Affichage frame 1
     public Text f1lance_1;  public Text f1lance_2;
 
@@ -37,7 +40,19 @@ public class Scorer : MonoBehaviour
 
     //Affichage frame 10
     public Text f10lance_1; public Text f10lance_2; public Text f10lance_3;
-    
+
+    public Text score1;
+    public Text score2;
+    public Text score3;
+    public Text score4;
+    public Text score5;
+    public Text score6;
+    public Text score7;
+    public Text score8;
+    public Text score9;
+    public Text score10;
+
+    int sc1, sc2, sc3, sc4, sc5, sc6, sc7, sc8, sc9, sc10;
 
     // Start is called before the first frame update
     void Start()
@@ -50,42 +65,43 @@ public class Scorer : MonoBehaviour
         //F1 Résultats :
         if (Ball.party == 0 && Ball.frame == 1 && Ball.nblance == 1) { frameRes[0] = GameManager.Instance.count; }
         if (Ball.party == 1 && Ball.frame == 1 && Ball.nblance == 2) { frameRes[1] = GameManager.Instance.count; }
-
+        sc1 = frameRes[0] + frameRes[1];
         //F2 Résultats :
         if (Ball.party == 2 && Ball.frame == 2 && Ball.nblance == 1) { frameRes[2] = GameManager.Instance.count; }
         if (Ball.party == 3 && Ball.frame == 2 && Ball.nblance == 2) { frameRes[3] = GameManager.Instance.count; }
-
+        sc2 = frameRes[2] + frameRes[3];
         //F3 Résultats :
         if (Ball.party == 4 && Ball.frame == 3 && Ball.nblance == 1) { frameRes[4] = GameManager.Instance.count; }
         if (Ball.party == 5 && Ball.frame == 3 && Ball.nblance == 2) { frameRes[5] = GameManager.Instance.count; }
-
+        sc3 = frameRes[4] + frameRes[5];
         //F4 Résultats :
         if (Ball.party == 6 && Ball.frame == 4 && Ball.nblance == 1) { frameRes[6] = GameManager.Instance.count; }
         if (Ball.party == 7 && Ball.frame == 4 && Ball.nblance == 2) { frameRes[7] = GameManager.Instance.count; }
-
+        sc4 = frameRes[6] + frameRes[7];
         //F5 Résultats :
         if (Ball.party == 8 && Ball.frame == 5 && Ball.nblance == 1) { frameRes[8] = GameManager.Instance.count; }
         if (Ball.party == 9 && Ball.frame == 5 && Ball.nblance == 2) { frameRes[9] = GameManager.Instance.count; }
-
+        sc5 = frameRes[8] + frameRes[9];
         //F6 Résultats :
         if (Ball.party == 10 && Ball.frame == 6 && Ball.nblance == 1) { frameRes[10] = GameManager.Instance.count; }
         if (Ball.party == 11 && Ball.frame == 6 && Ball.nblance == 2) { frameRes[11] = GameManager.Instance.count; }
-
+        sc6 = frameRes[10] + frameRes[11];
         //F7 Résultats :
         if (Ball.party == 12 && Ball.frame == 7 && Ball.nblance == 1) { frameRes[12] = GameManager.Instance.count; }
         if (Ball.party == 13 && Ball.frame == 7 && Ball.nblance == 2) { frameRes[13] = GameManager.Instance.count; }
-
+        sc7 = frameRes[12] + frameRes[13];
         //F8 Résultats :
         if (Ball.party == 14 && Ball.frame == 8 && Ball.nblance == 1) { frameRes[14] = GameManager.Instance.count; }
         if (Ball.party == 15 && Ball.frame == 8 && Ball.nblance == 2) { frameRes[15] = GameManager.Instance.count; }
-
+        sc8=frameRes[14] + frameRes[15];
         //F9 Résultats :
         if (Ball.party == 16 && Ball.frame == 9 && Ball.nblance == 1) { frameRes[16] = GameManager.Instance.count; }
         if (Ball.party == 17 && Ball.frame == 9 && Ball.nblance == 2) { frameRes[17] = GameManager.Instance.count; }
-
+        sc9 = frameRes[16] + frameRes[17];
         //F10 Résultats :
         if (Ball.party == 18 &&  Ball.frame == 10 && Ball.nblance == 1) { frameRes[18] = GameManager.Instance.count; }
         if (Ball.party == 19 && Ball.frame == 10 && Ball.nblance == 2) { frameRes[19] = GameManager.Instance.count; }
+        sc10 = frameRes[18] + frameRes[19];
     }
 
     // Update is called once per frame
@@ -132,5 +148,19 @@ public class Scorer : MonoBehaviour
         //Affichage frame 10
         f10lance_1.text = "" + frameRes[18];
         f10lance_2.text = "" + frameRes[19];
+
+
+        /*  */
+        score1.text = "" + sc1;
+        score2.text = "" + sc2;
+        score3.text = "" + sc3;
+        score4.text = "" + sc4;
+        score5.text = "" + sc5;
+        score6.text = "" + sc6;
+        score7.text = "" + sc7;
+        score8.text = "" + sc8;
+        score9.text = "" + sc9;
+        score10.text = "" + sc10;
+
     }
 }

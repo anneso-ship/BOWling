@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
     public Text quilleDown;
     public int _count;
 
+  
+
     public GameManager()
     {
         this.numberFrame = numberFrame;
@@ -73,6 +75,7 @@ public class GameManager : MonoBehaviour
         UpdateUI();
     }
 
+    
 
     // Start is called before the first frame update
     void Start()

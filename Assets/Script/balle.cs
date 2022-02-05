@@ -59,6 +59,7 @@ public class balle : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             resetBallPosition();
+            GameManager.Instance.count = 0;
         }
 
 

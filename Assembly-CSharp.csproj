@@ -55,11 +55,13 @@
   <ItemGroup>
     <Compile Include="Assets\Script\ResetObject.cs" />
     <Compile Include="Assets\Script\GameOptions.cs" />
+    <Compile Include="Assets\Script\Scorer.cs" />
+    <Compile Include="Assets\Script\ScoreCounter.cs" />
     <Compile Include="Assets\Script\FollowBall.cs" />
     <Compile Include="Assets\Script\GameManager.cs" />
     <Compile Include="Assets\Script\quilles.cs" />
     <Compile Include="Assets\Script\balle.cs" />
-    <Compile Include="Assets\Script\Scorer.cs" />
+    <Compile Include="Assets\Script\Frame.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
