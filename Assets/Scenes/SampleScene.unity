@@ -1794,8 +1794,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 208078215}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -715.4235, y: 178.1107, z: -79.2474}
-  m_LocalScale: {x: 42.848, y: 444.36273, z: 1007.97504}
+  m_LocalPosition: {x: -715.4235, y: 178.1107, z: -80.149}
+  m_LocalScale: {x: 42.848, y: 444.36273, z: 1009.7893}
   m_Children:
   - {fileID: 620294693}
   m_Father: {fileID: 744308675}
@@ -10797,50 +10797,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2faa5e20befb654fa7d714f5b2c73a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frames:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   frameRes: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   Ball: {fileID: 1293533700}
-  f1lance_1: {fileID: 95090196}
-  f1lance_2: {fileID: 411838622}
-  f2lance_1: {fileID: 1514231142}
-  f2lance_2: {fileID: 276840046}
-  f3lance_1: {fileID: 2121263827}
-  f3lance_2: {fileID: 1510221587}
-  f4lance_1: {fileID: 1687637923}
-  f4lance_2: {fileID: 173234020}
-  f5lance_1: {fileID: 1732463193}
-  f5lance_2: {fileID: 24166903}
-  f6lance_1: {fileID: 790558051}
-  f6lance_2: {fileID: 2109076988}
-  f7lance_1: {fileID: 18318621}
-  f7lance_2: {fileID: 41432523}
-  f8lance_1: {fileID: 2080899393}
-  f8lance_2: {fileID: 1679288184}
-  f9lance_1: {fileID: 1456388038}
-  f9lance_2: {fileID: 882846683}
-  f10lance_1: {fileID: 503984707}
-  f10lance_2: {fileID: 385417547}
-  f10lance_3: {fileID: 1226323270}
-  score1: {fileID: 391623617}
-  score2: {fileID: 1296237099}
-  score3: {fileID: 1237722440}
-  score4: {fileID: 1310403975}
-  score5: {fileID: 411539730}
-  score6: {fileID: 100849804}
-  score7: {fileID: 1959411844}
-  score8: {fileID: 127147204}
-  score9: {fileID: 273745988}
-  score10: {fileID: 1732460021}
+  scores_text:
+  - {fileID: 95090196}
+  - {fileID: 411838622}
+  - {fileID: 1514231142}
+  - {fileID: 276840046}
+  - {fileID: 2121263827}
+  - {fileID: 1510221587}
+  - {fileID: 1687637923}
+  - {fileID: 173234020}
+  - {fileID: 1732463193}
+  - {fileID: 24166903}
+  - {fileID: 790558051}
+  - {fileID: 2109076988}
+  - {fileID: 18318621}
+  - {fileID: 41432523}
+  - {fileID: 2080899393}
+  - {fileID: 1679288184}
+  - {fileID: 1456388038}
+  - {fileID: 882846683}
+  - {fileID: 503984707}
+  - {fileID: 385417547}
+  - {fileID: 1226323270}
+  scores_frame:
+  - {fileID: 391623617}
+  - {fileID: 1296237099}
+  - {fileID: 1237722440}
+  - {fileID: 1310403975}
+  - {fileID: 411539730}
+  - {fileID: 100849804}
+  - {fileID: 1959411844}
+  - {fileID: 127147204}
+  - {fileID: 273745988}
+  - {fileID: 1732460021}
+  frame: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!1 &1699093281
 GameObject:
   m_ObjectHideFlags: 0

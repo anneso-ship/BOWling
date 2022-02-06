@@ -61,7 +61,6 @@
     <Compile Include="Assets\Script\GameManager.cs" />
     <Compile Include="Assets\Script\quilles.cs" />
     <Compile Include="Assets\Script\balle.cs" />
-    <Compile Include="Assets\Script\Frame.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

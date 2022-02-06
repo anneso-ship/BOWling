@@ -11,17 +11,15 @@ public class GameManager : MonoBehaviour
     public Text PartyRes;
     public balle Ball;
     ResetObject resposQuille ;
-    public int[,] CaseParty = new int[3, 20] {
-       /*STRIKE*/ { 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0}, 
-       /*SPARE*/  { 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2},
-       /*TROU*/   { 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3}
+    public int[,] CaseParty = new int[3, 21] {
+       /*STRIKE*/ { 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1}, 
+       /*SPARE*/  { 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 2},
+       /*TROU*/   { 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 3}
     };
     public static GameManager Instance;
     public List<quilles> Quilles = new List<quilles>();//Liste de quilles
     public Text quilleDown;
     public int _count;
-
-  
 
     public GameManager()
     {

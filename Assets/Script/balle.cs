@@ -43,7 +43,7 @@ public class balle : MonoBehaviour
         
         if (party % 2 == 0) { nblance=1; } 
         else if (party % 2 != 0) { nblance = 2; }
-
+        else if (party == 10 && nblance == 2) { nblance = 3; }//Revoir  
         if (lance == false)
         {
             ballPosition = gameObject.transform.position;
