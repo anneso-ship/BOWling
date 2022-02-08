@@ -29,8 +29,8 @@ public class balle : MonoBehaviour
     {
         
             party++;
-        Debug.Log("FRAME :" + party);
-            ball.transform.position = new Vector3(34.0438f, 13.07796f, -466.29f);
+            Debug.Log("FRAME :" + party);
+            ball.transform.position = new Vector3(34.0438f, 24.81796f, -275.39f);
             lance = false;
             if (party % 2 == 0) { frame++; }
         

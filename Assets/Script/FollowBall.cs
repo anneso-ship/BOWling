@@ -9,7 +9,7 @@ public class FollowBall : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        decalage = new Vector3(-0.8f, 35.0f, -75f);
+        decalage = new Vector3(-0.8f, 20.0f, -90f);
     }
 
     // Update is called once per frame
