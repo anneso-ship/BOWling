@@ -48,17 +48,17 @@ public class GameManager : MonoBehaviour
         quilleDown.text = "" + count;
     }
 
-    public int Result( int numberParty, int count)
+    public int Result( int numberParty,int a, int b, int c)
     {
         //STRIKE
-        if(numberParty % 2==0 && count == 10) { ResultParty = CaseParty[0,numberParty]; PartyRes.text = "STRIKE !!"; }
+        if(numberParty % 2==0 && a == 10) { ResultParty = CaseParty[0,numberParty]; PartyRes.text = "STRIKE !!"; }
 
-        else if (numberParty != 0) {
+        else if (numberParty%2 != 0) {
             //SPARE
-            if (count == 10) { ResultParty = CaseParty[1, numberParty]; PartyRes.text = "SPARE !!"; }
+            if (a+b == 10) { ResultParty = CaseParty[1, numberParty]; PartyRes.text = "SPARE !!"; }
 
             //TROU
-            if (count < 10) { ResultParty = CaseParty[2, numberParty]; PartyRes.text = "TROU !!"; }
+            if (a+b+c < 10) { ResultParty = CaseParty[2, numberParty]; PartyRes.text = "TROU !!"; }
         }
         return ResultParty;
     }
@@ -84,6 +84,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Result(Ball.party, count);
+       // Result(Ball.party, count);
     }
 }

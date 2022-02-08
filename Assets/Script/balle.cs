@@ -30,7 +30,7 @@ public class balle : MonoBehaviour
         
             party++;
         Debug.Log("FRAME :" + party);
-            ball.transform.position = new Vector3(-61.18f, 35f, -471.6f);
+            ball.transform.position = new Vector3(34.0438f, 13.07796f, -466.29f);
             lance = false;
             if (party % 2 == 0) { frame++; }
         
@@ -43,7 +43,6 @@ public class balle : MonoBehaviour
         
         if (party % 2 == 0) { nblance=1; } 
         else if (party % 2 != 0) { nblance = 2; }
-        else if (party == 10 && nblance == 2) { nblance = 3; }//Revoir  
         if (lance == false)
         {
             ballPosition = gameObject.transform.position;

@@ -9,10 +9,16 @@ public class Scorer : MonoBehaviour
     public int[] frameRes = new int[21] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     public balle Ball;
 
-   
+    public int sum1;
+    public int sum2;
+    public int[] total_scores;
+    private int round;
+
     public Text[] scores_text;
     public Text[] scores_frame;
     public int[] frame = new int[10];
+
+    public Text ScoreTotal;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,46 +28,84 @@ public class Scorer : MonoBehaviour
     void ScoreDisplay()
     {
         //F1 Résultats :
-        if (Ball.party == 0 && Ball.frame == 1 && Ball.nblance == 1) { frameRes[0] = GameManager.Instance.count; }
-        if (Ball.party == 1 && Ball.frame == 1 && Ball.nblance == 2) { frameRes[1] = GameManager.Instance.count; }
-   
+        if(Ball.frame == 1){
+            if (Ball.party == 0 && Ball.nblance == 1){ frameRes[0] = GameManager.Instance.count;  }
+            if (Ball.party == 1 && Ball.nblance == 2) { frameRes[1] = GameManager.Instance.count;}
+            GameManager.Instance.Result(Ball.party, frameRes[0], frameRes[1], 0);
+        }
+
         //F2 Résultats :
-        if (Ball.party == 2 && Ball.frame == 2 && Ball.nblance == 1) { frameRes[2] = GameManager.Instance.count; }
-        if (Ball.party == 3 && Ball.frame == 2 && Ball.nblance == 2) { frameRes[3] = GameManager.Instance.count; }
-       
+        else if (Ball.frame == 2)
+        {
+            if (Ball.party == 2  && Ball.nblance == 1) { frameRes[2] = GameManager.Instance.count; }
+            if (Ball.party == 3  && Ball.nblance == 2) { frameRes[3] = GameManager.Instance.count; }
+            GameManager.Instance.Result(Ball.party, frameRes[2], frameRes[3], 0);
+        }
+
         //F3 Résultats :
-        if (Ball.party == 4 && Ball.frame == 3 && Ball.nblance == 1) { frameRes[4] = GameManager.Instance.count; }
-        if (Ball.party == 5 && Ball.frame == 3 && Ball.nblance == 2) { frameRes[5] = GameManager.Instance.count; }
-      
+        else if (Ball.frame == 3)
+        {
+            if (Ball.party == 4  && Ball.nblance == 1) { frameRes[4] = GameManager.Instance.count; }
+            if (Ball.party == 5 && Ball.nblance == 2) { frameRes[5] = GameManager.Instance.count; }
+            GameManager.Instance.Result(Ball.party, frameRes[4], frameRes[5], 0);
+        }
+
         //F4 Résultats :
-        if (Ball.party == 6 && Ball.frame == 4 && Ball.nblance == 1) { frameRes[6] = GameManager.Instance.count; }
-        if (Ball.party == 7 && Ball.frame == 4 && Ball.nblance == 2) { frameRes[7] = GameManager.Instance.count; }
-       
+        else if (Ball.frame == 4)
+        {
+            if (Ball.party == 6 && Ball.nblance == 1) { frameRes[6] = GameManager.Instance.count; }
+            if (Ball.party == 7 && Ball.nblance == 2) { frameRes[7] = GameManager.Instance.count; }
+            GameManager.Instance.Result(Ball.party, frameRes[6], frameRes[7], 0);
+        }
+
         //F5 Résultats :
-        if (Ball.party == 8 && Ball.frame == 5 && Ball.nblance == 1) { frameRes[8] = GameManager.Instance.count; }
-        if (Ball.party == 9 && Ball.frame == 5 && Ball.nblance == 2) { frameRes[9] = GameManager.Instance.count; }
-       
+        else if (Ball.frame == 5)
+        {
+            if (Ball.party == 8  && Ball.nblance == 1) { frameRes[8] = GameManager.Instance.count; }
+            if (Ball.party == 9  && Ball.nblance == 2) { frameRes[9] = GameManager.Instance.count; }
+            GameManager.Instance.Result(Ball.party, frameRes[8], frameRes[9], 0);
+        }
+
         //F6 Résultats :
-        if (Ball.party == 10 && Ball.frame == 6 && Ball.nblance == 1) { frameRes[10] = GameManager.Instance.count; }
-        if (Ball.party == 11 && Ball.frame == 6 && Ball.nblance == 2) { frameRes[11] = GameManager.Instance.count; }
-      
+        else if (Ball.frame == 6)
+        {
+            if (Ball.party == 10  && Ball.nblance == 1) { frameRes[10] = GameManager.Instance.count; }
+            if (Ball.party == 11  && Ball.nblance == 2) { frameRes[11] = GameManager.Instance.count; }
+            GameManager.Instance.Result(Ball.party, frameRes[10], frameRes[11], 0);
+        }
+
         //F7 Résultats :
-        if (Ball.party == 12 && Ball.frame == 7 && Ball.nblance == 1) { frameRes[12] = GameManager.Instance.count; }
-        if (Ball.party == 13 && Ball.frame == 7 && Ball.nblance == 2) { frameRes[13] = GameManager.Instance.count; }
-      
+        else if (Ball.frame == 7)
+        {
+            if (Ball.party == 12  && Ball.nblance == 1) { frameRes[12] = GameManager.Instance.count; }
+            if (Ball.party == 13  && Ball.nblance == 2) { frameRes[13] = GameManager.Instance.count; }
+            GameManager.Instance.Result(Ball.party, frameRes[12], frameRes[13], 0);
+        }
+
         //F8 Résultats :
-        if (Ball.party == 14 && Ball.frame == 8 && Ball.nblance == 1) { frameRes[14] = GameManager.Instance.count; }
-        if (Ball.party == 15 && Ball.frame == 8 && Ball.nblance == 2) { frameRes[15] = GameManager.Instance.count; }
-        
+        else if (Ball.frame == 8)
+        {
+            if (Ball.party == 14  && Ball.nblance == 1) { frameRes[14] = GameManager.Instance.count; }
+            if (Ball.party == 15  && Ball.nblance == 2) { frameRes[15] = GameManager.Instance.count; }
+            GameManager.Instance.Result(Ball.party, frameRes[14], frameRes[15], 0);
+        }
+
         //F9 Résultats :
-        if (Ball.party == 16 && Ball.frame == 9 && Ball.nblance == 1) { frameRes[16] = GameManager.Instance.count; }
-        if (Ball.party == 17 && Ball.frame == 9 && Ball.nblance == 2) { frameRes[17] = GameManager.Instance.count; }
-      
+        else if (Ball.frame == 9)
+        {
+            if (Ball.party == 16 && Ball.nblance == 1) { frameRes[16] = GameManager.Instance.count; }
+            if (Ball.party == 17 && Ball.nblance == 2) { frameRes[17] = GameManager.Instance.count; }
+            GameManager.Instance.Result(Ball.party, frameRes[16], frameRes[17],0);
+        }
+
         //F10 Résultats :
-        if (Ball.party == 18 &&  Ball.frame == 10 && Ball.nblance == 1) { frameRes[18] = GameManager.Instance.count; }
-        if (Ball.party == 19 && Ball.frame == 10 && Ball.nblance == 2) { frameRes[19] = GameManager.Instance.count; }
-        if (Ball.party == 20 && Ball.frame == 10 && Ball.nblance == 3) { frameRes[20] = GameManager.Instance.count; }
-     
+        else if (Ball.frame == 10)
+        {
+            if (Ball.party == 18 && Ball.nblance == 1) { frameRes[18] = GameManager.Instance.count; }
+            if (Ball.party == 19 &&  Ball.nblance == 2) { frameRes[19] = GameManager.Instance.count; }
+            GameManager.Instance.Result(Ball.party, frameRes[18], frameRes[19], frameRes[20]);
+        }
+
 
         for (int i = 0; i < frameRes.Length; i++)
         {
@@ -125,9 +169,127 @@ public class Scorer : MonoBehaviour
 
     }
 
+    public void RoundScoreDisplay(int[] roundScores)
+    {
+
+        int j = 0;
+        for (int i = 0; i < roundScores.Length - 1; i++)
+        {
+            sum1 = 0;
+            sum1 = roundScores[i] + roundScores[i + 1];
+            total_scores[j] = sum1;
+
+            if (i % 2 == 0)
+            {
+                if ((i > 5) && (round > 5))
+                {
+
+                    if ((roundScores[i - 2] == 10) && (roundScores[i - 4] == 10) && (roundScores[i - 6] == 10))
+                    {              //3 strikes in a row
+
+                        total_scores[j - 1] = 10 + sum1;
+                        total_scores[j - 2] = 20 + sum1;
+                        total_scores[j - 3] = 30;
+
+                       /* round_scores_text[j - 1].text = total_scores[j - 1].ToString();
+                        round_scores_text[j - 2].text = total_scores[j - 2].ToString();
+                        round_scores_text[j - 3].text = total_scores[j - 3].ToString();*/
+
+
+                    }
+                    else if ((roundScores[i - 2] == 10) & (roundScores[i - 4] == 10))
+                    {                                   //2 strikes in a row
+
+                        total_scores[j - 1] = 10 + sum1;
+                        total_scores[j - 2] = 20 + sum1;
+
+                       // round_scores_text[j - 1].text = total_scores[j - 1].ToString();
+                        //round_scores_text[j - 2].text = total_scores[j - 2].ToString();
+
+
+                    }
+                    else if (roundScores[i - 2] == 10)
+                    {                                                               //1 strike
+
+                        total_scores[j - 1] = sum1 + total_scores[j - 1];
+                        //round_scores_text[j - 1].text = total_scores[j - 1].ToString();
+
+                    }
+                }
+                else if ((i > 3) && (round > 3))
+                {
+
+                    if ((roundScores[i - 2] == 10) & (roundScores[i - 4] == 10))
+                    {                                       //2 strikes in a row
+
+                        total_scores[j - 1] = 10 + sum1;
+                        total_scores[j - 2] = 20 + sum1;
+
+                        // round_scores_text[j - 1].text = total_scores[j - 1].ToString();
+                        // round_scores_text[j - 2].text = total_scores[j - 2].ToString();
+
+
+                    }
+                    else if (roundScores[i - 2] == 10)
+                    {                                                               //1 strike
+
+                        total_scores[j - 1] = sum1 + total_scores[j - 1];
+                        // round_scores_text[j - 1].text = total_scores[j - 1].ToString();
+
+                    }
+                }
+                else if ((i > 1) && (round > 1))
+                {                                                           //1 strike
+                                                                            //Debug.Log("mpikaaa1");
+
+                    if (roundScores[i - 2] == 10)
+                    {
+
+                        total_scores[j - 1] = sum1 + total_scores[j - 1];
+                        //  round_scores_text[j - 1].text = total_scores[j - 1].ToString();
+
+                    }
+
+                }
+                if ((i > 1) && (round > 1))
+                {
+                    if ((roundScores[i - 2] + roundScores[i - 1] == 10) && (roundScores[i - 2] != 10))
+                    {       //spare (and not strike)
+
+                        //total_scores[j - 1] = total_scores[j - 1] + roundScores[i];
+                        //round_scores_text[j - 1].text = total_scores[j - 1].ToString();
+                    }
+                }
+                if (sum1 == 0)
+                {
+                    //round_scores_text[j].text = " ";
+
+                    i = i + 1;
+                    j = j + 1;
+                }
+                else
+                {
+                    //round_scores_text[j].text = sum1.ToString();
+
+                    i = i + 1;
+                    j = j + 1;
+                }
+
+            }
+        }
+
+    }
+
+    
+
+
+
     // Update is called once per frame
-    void Update()  { 
+    void Update()
+    {
         ScoreDisplay();
         FrameDisplay();
+
     }
+
 }
