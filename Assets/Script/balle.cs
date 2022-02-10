@@ -46,9 +46,11 @@ public class balle : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("bloc8"))
         {
-            
-                resetBallPosition();
-            
+
+            resetBallPosition();
+            GameManager.Instance.count = 0;
+            blocked.SetActive(true);
+
         }
     }
 

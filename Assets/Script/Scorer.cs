@@ -169,7 +169,7 @@ public class Scorer : MonoBehaviour
             }
         }
 
-        scoring();
+       
 
     }
 
