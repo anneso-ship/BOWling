@@ -73,17 +73,4 @@ public class GameManager : MonoBehaviour
         UpdateUI();
     }
 
-    
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       // Result(Ball.party, count);
-    }
 }

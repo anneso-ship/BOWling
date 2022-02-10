@@ -9,20 +9,44 @@ public class Scorer : MonoBehaviour
     public int[] frameRes = new int[21] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     public balle Ball;
 
-    public int sum1;
-    public int sum2;
-    public int[] total_scores;
     private int round;
-
+    public Text score;
     public Text[] scores_text;
     public Text[] scores_frame;
     public int[] frame = new int[10];
 
-    public Text ScoreTotal;
+    public int totalScore;
+
     // Start is called before the first frame update
     void Start()
     {
         
+    }
+
+    void scoring()
+    {
+        
+        for(int i=0; i < frameRes.Length; i++)
+        {
+            if (i < frameRes.Length)
+            {
+                //TROU
+                if (frameRes[i] + frameRes[i + 1] < 10)
+                {
+                    totalScore += frameRes[i] + frameRes[i + 1];
+                    score.text = "" + totalScore;
+                }
+
+                //SPARE
+                if (frameRes[i] + frameRes[i + 1] == 10)
+                {
+                    totalScore += frameRes[i] + frameRes[i + 1] + frameRes[i + 2];
+                    score.text = "" + totalScore;
+                }
+
+                //STRIKE
+            }
+        }
     }
 
     void ScoreDisplay()
@@ -145,7 +169,7 @@ public class Scorer : MonoBehaviour
             }
         }
 
-
+        scoring();
 
     }
 
@@ -169,127 +193,12 @@ public class Scorer : MonoBehaviour
 
     }
 
-    public void RoundScoreDisplay(int[] roundScores)
-    {
-
-        int j = 0;
-        for (int i = 0; i < roundScores.Length - 1; i++)
-        {
-            sum1 = 0;
-            sum1 = roundScores[i] + roundScores[i + 1];
-            total_scores[j] = sum1;
-
-            if (i % 2 == 0)
-            {
-                if ((i > 5) && (round > 5))
-                {
-
-                    if ((roundScores[i - 2] == 10) && (roundScores[i - 4] == 10) && (roundScores[i - 6] == 10))
-                    {              //3 strikes in a row
-
-                        total_scores[j - 1] = 10 + sum1;
-                        total_scores[j - 2] = 20 + sum1;
-                        total_scores[j - 3] = 30;
-
-                       /* round_scores_text[j - 1].text = total_scores[j - 1].ToString();
-                        round_scores_text[j - 2].text = total_scores[j - 2].ToString();
-                        round_scores_text[j - 3].text = total_scores[j - 3].ToString();*/
-
-
-                    }
-                    else if ((roundScores[i - 2] == 10) & (roundScores[i - 4] == 10))
-                    {                                   //2 strikes in a row
-
-                        total_scores[j - 1] = 10 + sum1;
-                        total_scores[j - 2] = 20 + sum1;
-
-                       // round_scores_text[j - 1].text = total_scores[j - 1].ToString();
-                        //round_scores_text[j - 2].text = total_scores[j - 2].ToString();
-
-
-                    }
-                    else if (roundScores[i - 2] == 10)
-                    {                                                               //1 strike
-
-                        total_scores[j - 1] = sum1 + total_scores[j - 1];
-                        //round_scores_text[j - 1].text = total_scores[j - 1].ToString();
-
-                    }
-                }
-                else if ((i > 3) && (round > 3))
-                {
-
-                    if ((roundScores[i - 2] == 10) & (roundScores[i - 4] == 10))
-                    {                                       //2 strikes in a row
-
-                        total_scores[j - 1] = 10 + sum1;
-                        total_scores[j - 2] = 20 + sum1;
-
-                        // round_scores_text[j - 1].text = total_scores[j - 1].ToString();
-                        // round_scores_text[j - 2].text = total_scores[j - 2].ToString();
-
-
-                    }
-                    else if (roundScores[i - 2] == 10)
-                    {                                                               //1 strike
-
-                        total_scores[j - 1] = sum1 + total_scores[j - 1];
-                        // round_scores_text[j - 1].text = total_scores[j - 1].ToString();
-
-                    }
-                }
-                else if ((i > 1) && (round > 1))
-                {                                                           //1 strike
-                                                                            //Debug.Log("mpikaaa1");
-
-                    if (roundScores[i - 2] == 10)
-                    {
-
-                        total_scores[j - 1] = sum1 + total_scores[j - 1];
-                        //  round_scores_text[j - 1].text = total_scores[j - 1].ToString();
-
-                    }
-
-                }
-                if ((i > 1) && (round > 1))
-                {
-                    if ((roundScores[i - 2] + roundScores[i - 1] == 10) && (roundScores[i - 2] != 10))
-                    {       //spare (and not strike)
-
-                        //total_scores[j - 1] = total_scores[j - 1] + roundScores[i];
-                        //round_scores_text[j - 1].text = total_scores[j - 1].ToString();
-                    }
-                }
-                if (sum1 == 0)
-                {
-                    //round_scores_text[j].text = " ";
-
-                    i = i + 1;
-                    j = j + 1;
-                }
-                else
-                {
-                    //round_scores_text[j].text = sum1.ToString();
-
-                    i = i + 1;
-                    j = j + 1;
-                }
-
-            }
-        }
-
-    }
-
     
-
-
-
     // Update is called once per frame
     void Update()
     {
         ScoreDisplay();
         FrameDisplay();
-
     }
 
 }

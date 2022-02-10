@@ -17,12 +17,18 @@ public class balle : MonoBehaviour
     public Text frameAff;
     public int frame;
     public int nblance;
+    public GameObject blocked;
+
+    private float time;
+    public float timerInterval = 1;
+    float tick;
+    public Text Timing;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         frame = 1;
-       
+        blocked.SetActive(true);
     }
     
     public void resetBallPosition()
@@ -36,29 +42,42 @@ public class balle : MonoBehaviour
         
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("bloc8"))
+        {
+            
+                resetBallPosition();
+            
+        }
+    }
+
+
     private void Update()
     {
         
-        frameAff.text = "FRAME " + frame + ", " + "lancé :" + nblance;
+        frameAff.text = "FRAME " + frame + ", " + " lancé :" + nblance;
         
         if (party % 2 == 0) { nblance=1; } 
         else if (party % 2 != 0) { nblance = 2; }
         if (lance == false)
-        {
+        { //Choix trajectoire
             ballPosition = gameObject.transform.position;
             float vDeplacement = Input.GetAxis("Horizontal") * vitesseDeplacement;
             rb.AddForce(vDeplacement, 0, 0);
+            blocked.SetActive(true);
         }
         if (Input.GetKeyDown(KeyCode.Space))
-        {
+        {   //Lancer la balle
             lance = true;
-            //rb.AddForce(transform.forward*force);
             rb.AddForce(ballPosition.x, 0, 80000);
+            blocked.SetActive(false);
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
             resetBallPosition();
             GameManager.Instance.count = 0;
+            blocked.SetActive(true);
         }
 
 

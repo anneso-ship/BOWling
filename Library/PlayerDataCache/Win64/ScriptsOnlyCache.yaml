@@ -564,7 +564,7 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
-      Hash: e08338f06c611a164fe0b40bd74e105a
+      Hash: beac5c064fab6005bbd0e7c9f97a9f4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Scorer
@@ -876,7 +876,7 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: 14b6cf4101532dfcef2866a7349ffb14
+      Hash: dfb90d90beaa343e2c947a7bbbada917
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: balle
