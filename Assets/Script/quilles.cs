@@ -57,7 +57,7 @@ public class quilles : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //Ajouter le tag "Ball" à la boule et "Quille" aux quilles
-        enableCheck = collision.gameObject.CompareTag("Ball") || collision.gameObject.CompareTag("Quille") || collision.gameObject.CompareTag("bloc8");
+        enableCheck = collision.gameObject.CompareTag("Ball") || collision.gameObject.CompareTag("Quille")  ;
     }
 
 

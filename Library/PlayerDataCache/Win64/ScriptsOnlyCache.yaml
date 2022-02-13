@@ -98,93 +98,93 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1464}
     - Class: 114
-      Script: {instanceID: 1474}
+      Script: {instanceID: 1476}
     - Class: 114
-      Script: {instanceID: 1688}
+      Script: {instanceID: 1690}
     - Class: 114
-      Script: {instanceID: 1772}
+      Script: {instanceID: 1774}
     - Class: 114
-      Script: {instanceID: 1800}
+      Script: {instanceID: 1802}
     - Class: 114
-      Script: {instanceID: 1880}
-    - Class: 114
-      Script: {instanceID: 2194}
+      Script: {instanceID: 1882}
     - Class: 114
       Script: {instanceID: 2196}
     - Class: 114
-      Script: {instanceID: 2216}
+      Script: {instanceID: 2198}
     - Class: 114
-      Script: {instanceID: 2482}
+      Script: {instanceID: 2218}
     - Class: 114
-      Script: {instanceID: 2496}
+      Script: {instanceID: 2484}
     - Class: 114
-      Script: {instanceID: 2582}
+      Script: {instanceID: 2498}
     - Class: 114
-      Script: {instanceID: 2614}
+      Script: {instanceID: 2584}
     - Class: 114
-      Script: {instanceID: 2742}
+      Script: {instanceID: 2616}
     - Class: 114
-      Script: {instanceID: 2910}
+      Script: {instanceID: 2744}
     - Class: 114
-      Script: {instanceID: 2962}
+      Script: {instanceID: 2912}
     - Class: 114
-      Script: {instanceID: 3084}
+      Script: {instanceID: 2964}
     - Class: 114
-      Script: {instanceID: 3090}
+      Script: {instanceID: 3086}
     - Class: 114
-      Script: {instanceID: 3100}
+      Script: {instanceID: 3092}
     - Class: 114
-      Script: {instanceID: 3228}
+      Script: {instanceID: 3102}
     - Class: 114
-      Script: {instanceID: 3288}
+      Script: {instanceID: 3232}
     - Class: 114
-      Script: {instanceID: 3336}
+      Script: {instanceID: 3292}
     - Class: 114
-      Script: {instanceID: 3460}
+      Script: {instanceID: 3340}
     - Class: 114
       Script: {instanceID: 3464}
     - Class: 114
-      Script: {instanceID: 3588}
+      Script: {instanceID: 3468}
     - Class: 114
       Script: {instanceID: 3592}
     - Class: 114
-      Script: {instanceID: 3618}
+      Script: {instanceID: 3596}
     - Class: 114
-      Script: {instanceID: 3756}
+      Script: {instanceID: 3622}
     - Class: 114
-      Script: {instanceID: 3794}
+      Script: {instanceID: 3760}
     - Class: 114
-      Script: {instanceID: 3824}
+      Script: {instanceID: 3798}
     - Class: 114
-      Script: {instanceID: 3906}
+      Script: {instanceID: 3828}
     - Class: 114
       Script: {instanceID: 3910}
     - Class: 114
-      Script: {instanceID: 3974}
+      Script: {instanceID: 3914}
     - Class: 114
-      Script: {instanceID: 3976}
+      Script: {instanceID: 3978}
     - Class: 114
-      Script: {instanceID: 4058}
+      Script: {instanceID: 3980}
     - Class: 114
-      Script: {instanceID: 4088}
+      Script: {instanceID: 4062}
     - Class: 114
-      Script: {instanceID: 4254}
+      Script: {instanceID: 4092}
     - Class: 114
-      Script: {instanceID: 4670}
+      Script: {instanceID: 4258}
     - Class: 114
-      Script: {instanceID: 4822}
+      Script: {instanceID: 4674}
     - Class: 114
-      Script: {instanceID: 4876}
+      Script: {instanceID: 4826}
     - Class: 114
-      Script: {instanceID: 5140}
+      Script: {instanceID: 4880}
     - Class: 114
-      Script: {instanceID: 5248}
+      Script: {instanceID: 5144}
     - Class: 114
-      Script: {instanceID: 5294}
+      Script: {instanceID: 5252}
     - Class: 114
-      Script: {instanceID: 5648}
+      Script: {instanceID: 5298}
     - Class: 114
-      Script: {instanceID: 5958}
+      Script: {instanceID: 5652}
+    - Class: 114
+      Script: {instanceID: 5962}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -468,6 +468,12 @@ ScriptsOnlyBuild:
     className: TestRunCallbackListener
   - hash:
       serializedVersion: 2
+      Hash: 074a44f1c2761ea9250a7544f0bfc5ee
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Frame
+  - hash:
+      serializedVersion: 2
       Hash: f40fedccd4adbc76605bea6d67537e4b
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -564,7 +570,7 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
-      Hash: beac5c064fab6005bbd0e7c9f97a9f4f
+      Hash: 54f9af9f33e7156913a5adfcd6d093dc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Scorer
@@ -876,11 +882,11 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: dfb90d90beaa343e2c947a7bbbada917
+      Hash: ef21be69342137a962f7c10788cede6f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: balle
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/sophi/OneDrive/Bureau/BOWLING/Bowling.exe
+  playerPath: C:/Users/sophi/OneDrive/Documents/GitHub/BOWling/Build/Bowling.exe

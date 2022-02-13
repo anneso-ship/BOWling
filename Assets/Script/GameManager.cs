@@ -21,12 +21,7 @@ public class GameManager : MonoBehaviour
     public Text quilleDown;
     public int _count;
 
-    public GameManager()
-    {
-        this.numberFrame = numberFrame;
-        this.numberCase = numberCase;
-        this.ResultParty = ResultParty;
-    }
+    
 
     private void Awake() { Instance = this; }
 

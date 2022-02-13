@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{2AF254AB-FE65-60A1-8F54-BCC1B3015DA6}</ProjectGuid>
+    <ProjectGuid>{A6348EFB-91FE-E825-479B-294F09D30CF6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.ShaderGraph.Editor</AssemblyName>
@@ -608,11 +608,11 @@
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.6.0\Editor\Data\Graphs\Texture2DArrayInputMaterialSlot.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.6.0\Editor\Data\Legacy\IMasterNode1.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.6.0\Editor\Data\Graphs\Vector3ShaderProperty.cs" />
-     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.6.0\Editor\Generation\Targets\VFXTarget.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.6.0\Editor\Data\Graphs\ScreenPositionMaterialSlot.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.6.0\Editor\Data\Nodes\Artistic\Adjustment\ReplaceColorNode.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.6.0\Editor\Generation\Data\ConditionalField.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.6.0\Editor\Data\Nodes\Math\Advanced\AbsoluteNode.cs" />
+     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.6.0\Editor\Generation\Targets\VFXTarget.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.6.0\Editor\Data\Graphs\Texture2DMaterialSlot.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.6.0\Editor\Data\Nodes\Math\Basic\DivideNode.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.6.0\Editor\Data\Util\UvChannel.cs" />
@@ -927,6 +927,9 @@
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEditor.Android.Extensions">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.WindowsStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
@@ -934,25 +937,25 @@
  <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Plastic.Newtonsoft.Json">
- <HintPath>C:/Users/sophi/Bowling/Library/PackageCache/com.unity.collab-proxy@1.13.5/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+ <HintPath>C:/Users/sophi/OneDrive/Documents/GitHub/BOWling/Library/PackageCache/com.unity.collab-proxy@1.13.5/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Plastic.Antlr3.Runtime">
- <HintPath>C:/Users/sophi/Bowling/Library/PackageCache/com.unity.collab-proxy@1.13.5/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+ <HintPath>C:/Users/sophi/OneDrive/Documents/GitHub/BOWling/Library/PackageCache/com.unity.collab-proxy@1.13.5/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="unityplastic">
- <HintPath>C:/Users/sophi/Bowling/Library/PackageCache/com.unity.collab-proxy@1.13.5/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
+ <HintPath>C:/Users/sophi/OneDrive/Documents/GitHub/BOWling/Library/PackageCache/com.unity.collab-proxy@1.13.5/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
  </Reference>
  <Reference Include="log4netPlastic">
- <HintPath>C:/Users/sophi/Bowling/Library/PackageCache/com.unity.collab-proxy@1.13.5/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
+ <HintPath>C:/Users/sophi/OneDrive/Documents/GitHub/BOWling/Library/PackageCache/com.unity.collab-proxy@1.13.5/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
  </Reference>
  <Reference Include="ICSharpCode.NRefactory">
- <HintPath>C:/Users/sophi/Bowling/Library/PackageCache/com.unity.render-pipelines.core@10.6.0/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
+ <HintPath>C:/Users/sophi/OneDrive/Documents/GitHub/BOWling/Library/PackageCache/com.unity.render-pipelines.core@10.6.0/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
- <HintPath>C:/Users/sophi/Bowling/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+ <HintPath>C:/Users/sophi/OneDrive/Documents/GitHub/BOWling/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
- <HintPath>C:/Users/sophi/Bowling/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
+ <HintPath>C:/Users/sophi/OneDrive/Documents/GitHub/BOWling/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -1305,37 +1308,37 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.ShaderGraph.Utilities.csproj">
-      <Project>{E74C70F2-D19F-536D-8E9F-9138A7CC7602}</Project>
+      <Project>{1F861402-8BAF-0029-5670-F8E50E6150E1}</Project>
       <Name>Unity.ShaderGraph.Utilities</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="Unity.Searcher.Editor.csproj">
-      <Project>{05126B0E-4D7D-A7C6-EFB1-589B1B0DDB36}</Project>
+      <Project>{93051655-FE90-8342-0169-4A3AAF923F54}</Project>
       <Name>Unity.Searcher.Editor</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
-      <Project>{3E9EC121-963A-8F2D-2A19-FA1B9BBE6A61}</Project>
+      <Project>{F073C51A-F0E6-A5DE-6B2A-487CCF3DBD26}</Project>
       <Name>Unity.RenderPipelines.Core.Runtime</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{C42E373A-C034-4C5B-5988-03D977E2DDDE}</Project>
+      <Project>{9377B691-7D02-B04D-9303-7785745FC8E0}</Project>
       <Name>UnityEditor.UI</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{5CE5CC2C-E18C-93AF-62A9-4C89408E3C8B}</Project>
+      <Project>{66EC1AFC-BB0E-0883-EFF8-A664AA510BB3}</Project>
       <Name>UnityEngine.UI</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{83FDAD31-A826-B2F9-F693-1F63F634F0FC}</Project>
+      <Project>{550ED5C9-B705-6CDE-4367-5ABB53E1B8BF}</Project>
       <Name>UnityEngine.TestRunner</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{AFA666E3-10A6-24D6-53B2-63221E50FA2E}</Project>
+      <Project>{35ECA8FC-3E75-59AF-A25A-042EEEE3704B}</Project>
       <Name>UnityEditor.TestRunner</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>

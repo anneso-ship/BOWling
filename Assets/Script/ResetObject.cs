@@ -55,14 +55,11 @@ public class ResetObject : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Ball.party %2 == 0 && Ball.reset == true)
         {
-            if(Ball.nblance  == 2)
-            {
-                resetTransform();
-                GameManager.Instance.count=0;
-                GameManager.Instance.ResetGame();
-            }
+            resetTransform();
+            Ball.reset = false;
+            GameManager.Instance.ResetGame();
         }
     }
 
