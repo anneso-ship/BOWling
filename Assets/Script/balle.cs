@@ -11,47 +11,34 @@ public class balle : MonoBehaviour
     public Rigidbody rb;
     public int party;
     Vector3 mouseInScreen;
-    float vitesseDeplacement = 1000f;
+    float vitesseDeplacement = 100f;
     public bool lance = false;
     public int force;
     public Text frameAff;
     public int frame;
     public int nblance;
     public GameObject blocked;
-
+    public GameObject blocked_1;
+    public GameObject blocked_2;
     public bool reset = false;
-    
-    public Text Timing;
-
-    public int lancé;
-
+    public Scorer score;
+  
+   
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        frame = 1;lancé = 1;
-
+        frame = 1;
         blocked.SetActive(true);
-        
     }
-
-   /* IEnumerator timer()
-    {
-        while (time > 0)
-        {
-            time--;
-            yield return new WaitForSeconds(1f);
-            Timing.text = "" + time;
-        }
-    }
-    */
 
     public void resetBallPosition()
     {
        party++;
        Debug.Log("FRAME :" + party);
-       ball.transform.position = new Vector3(34.0438f, 24.81796f, -275.39f);
+       ball.transform.position = new Vector3(26.94381f, 24.81796f, -275.39f);
        lance = false;
        if (party % 2 == 0) { frame++; }
+       score.CalculationScore();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -68,40 +55,28 @@ public class balle : MonoBehaviour
 
     private void Update()
     {
-        
         frameAff.text = "FRAME " + frame + ", " + " lancé :" + nblance;
         
         if (party % 2 == 0) { nblance=1; } 
         else if (party % 2 != 0) { nblance = 2; }
-
-
+        
+       
         if (lance == false)
         { //Choix trajectoire
             ballPosition = gameObject.transform.position;
             float vDeplacement = Input.GetAxis("Horizontal") * vitesseDeplacement;
             rb.AddForce(vDeplacement, 0, 0);
             blocked.SetActive(true);
+            blocked_1.SetActive(true);
+            blocked_2.SetActive(true);
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {   //Lancer la balle
             lance = true;
-            rb.AddForce(ballPosition.x, 0, 80000);
+            rb.AddForce(ballPosition.x, 0, 10000);
             blocked.SetActive(false);
+            blocked_1.SetActive(false);
+            blocked_2.SetActive(false);
         }
-        /*if (Input.GetKeyDown(KeyCode.R))
-        {
-            resetBallPosition();
-            GameManager.Instance.count = 0;
-            blocked.SetActive(true);
-        }
-        if (time == 0)
-        {
-            time = -1;
-            Timing.text = "";
-            resetBallPosition();
-            GameManager.Instance.count = 0;
-            blocked.SetActive(true);
-        }
-        */
     }
 }

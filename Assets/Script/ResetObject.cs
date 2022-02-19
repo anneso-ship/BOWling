@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ResetObject : MonoBehaviour
 {
-    public balle Ball;
+     public balle Ball;
      Vector3[] defaultPos;
      Vector3[] defaultScale;
      Quaternion[] defaultRot;
@@ -43,15 +43,25 @@ public class ResetObject : MonoBehaviour
     //Called when Button is clicked
      public void resetTransform()
      {
-
          //Restore the all the original pos, scale and rot  of each GameOBject
          for (int i = 0; i < models.Length; i++)
          {
              models[i].position = defaultPos[i];
              models[i].localScale = defaultScale[i];
              models[i].rotation = defaultRot[i];
+             models[i].GetComponent<Rigidbody>().isKinematic = true;
+
          }
      }
+
+    private void blocked()
+    {
+        for (int i = 0; i < models.Length; i++)
+        {
+            models[i].GetComponent<Rigidbody>().isKinematic = false;
+
+        }
+    }
 
     private void FixedUpdate()
     {
@@ -61,8 +71,12 @@ public class ResetObject : MonoBehaviour
             Ball.reset = false;
             GameManager.Instance.ResetGame();
         }
-    }
 
-    
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            blocked();
+        }
+
+    }
 
 }

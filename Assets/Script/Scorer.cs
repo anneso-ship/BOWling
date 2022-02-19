@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Scorer : MonoBehaviour
 {
 
-    public int[] frameRes = new int[21] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    public int[] frameRes = new int[21] ;
     public balle Ball;
 
     private int round;
@@ -17,7 +17,9 @@ public class Scorer : MonoBehaviour
 
     public int totalScore;
 
-    Frame[] frames = new Frame[10];
+    
+
+    Frame[] frames = new Frame[9];
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +31,7 @@ public class Scorer : MonoBehaviour
     {
         //F1 Résultats :
         if(Ball.frame == 1){
-            if (Ball.party == 0 && Ball.lancé == 1){ frameRes[0] = GameManager.Instance.count;  }
+            if (Ball.party == 0 && Ball.nblance == 1){ frameRes[0] = GameManager.Instance.count;  }
             if (Ball.party == 1 && Ball.nblance == 2) { frameRes[1] = GameManager.Instance.count; }
             GameManager.Instance.Result(Ball.party, frameRes[0], frameRes[1], 0); 
             frames[0] = new Frame(frameRes[0], frameRes[1], 0);
@@ -100,12 +102,13 @@ public class Scorer : MonoBehaviour
         }
 
         //F10 Résultats :
-        else if (Ball.frame == 10) {
+        /*else if (Ball.frame == 10) {
             if (Ball.party == 18 && Ball.nblance == 1) { frameRes[18] = GameManager.Instance.count; }
             if (Ball.party == 19 &&  Ball.nblance == 2) { frameRes[19] = GameManager.Instance.count; }
+            if (Ball.party == 20 && Ball.nblance == 3) { frameRes[20] = GameManager.Instance.count; }
             GameManager.Instance.Result(Ball.party, frameRes[18], frameRes[19], frameRes[20]);
             frames[9] = new Frame(frameRes[18], frameRes[19], frameRes[20]);
-        }
+        }*/
 
 
         for (int i = 0; i < frameRes.Length; i++)
@@ -199,12 +202,37 @@ public class Scorer : MonoBehaviour
                 totalScore += frames[i].getFirstscore() + frames[i].getSecondscore() + frames[i].getThiredscore();
             }
         }
+        
         return totalScore;
     }
+
+
+    public void CalculationScore()
+    {
+        for(int i=0; i <= frameRes.Length; i++)
+        {
+            
+                if (frameRes[i] + frameRes[i + 1] < 10 ) // TROU
+                {
+                    totalScore += frameRes[i] + frameRes[i + 1];
+                    
+                }
+                
+                if (frameRes[i] + frameRes[i + 1] == 10 && i % 2 == 0) //SPARE
+                {
+                    if (i <= 17) { totalScore += 10 + frameRes[i+2];  }
+                }
+                
+            
+            
+        }
+    }
+
 
     // Update is called once per frame
     void Update()
     {
+        
         ScoreDisplay();
         FrameDisplay();
     }
