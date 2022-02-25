@@ -450,7 +450,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerIntField
   - hash:
       serializedVersion: 2
-      Hash: bb1ecc72cde2e6b83119e9501c2cf4b0
+      Hash: 10026d7afe789e0e6504743d028be182
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameOptions
@@ -570,7 +570,7 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
-      Hash: 54f9af9f33e7156913a5adfcd6d093dc
+      Hash: ef61e43b825d5a79c297fc4efeddc905
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Scorer
@@ -882,7 +882,7 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: 4060f52e508ab2a3c333f6c328216151
+      Hash: 45d7a4833579410207751b0e6752aae0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: balle

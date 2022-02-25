@@ -65,7 +65,7 @@ public class ResetObject : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Ball.party %2 == 0 && Ball.reset == true)
+        if (Ball.nblance % 2 != 0 && Ball.reset == true)
         {
             resetTransform();
             Ball.reset = false;

@@ -46,9 +46,9 @@ public class GameManager : MonoBehaviour
     public int Result( int numberParty,int a, int b, int c)
     {
         //STRIKE
-        if(numberParty % 2==0 && a == 10) { ResultParty = CaseParty[0,numberParty]; PartyRes.text = "STRIKE !!"; }
+        if(numberParty % 2!=0 && a == 10) { ResultParty = CaseParty[0,numberParty]; PartyRes.text = "STRIKE !!"; }
 
-        else if (numberParty%2 != 0) {
+        else if (numberParty%2 == 0) {
             //SPARE
             if (a+b == 10) { ResultParty = CaseParty[1, numberParty]; PartyRes.text = "SPARE !!"; }
 

@@ -8,7 +8,6 @@ public class quilles : MonoBehaviour
     public Material _mat;
     private Vector3 _startPosition;
     private bool enableCheck;
-    //public Rigidbody _rb;
 
     private void Start()
     {

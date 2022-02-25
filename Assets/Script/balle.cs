@@ -22,23 +22,30 @@ public class balle : MonoBehaviour
     public GameObject blocked_2;
     public bool reset = false;
     public Scorer score;
-  
-   
+
+
+    public Text scoreText;
+    public GameOptions gameOption;
+    public GameObject scorePanel;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         frame = 1;
+        nblance = 1;
         blocked.SetActive(true);
     }
 
     public void resetBallPosition()
     {
-       party++;
-       Debug.Log("FRAME :" + party);
+       nblance++;
        ball.transform.position = new Vector3(26.94381f, 24.81796f, -275.39f);
        lance = false;
-       if (party % 2 == 0) { frame++; }
-       score.CalculationScore();
+       if (nblance % 2 != 0) { frame++; }
+       if(nblance == 22) { 
+            scoreText.text = ""+score.scoreCalculation();
+            scorePanel.SetActive(false);
+            gameOption.EndGame(); 
+       }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -57,8 +64,10 @@ public class balle : MonoBehaviour
     {
         frameAff.text = "FRAME " + frame + ", " + " lancé :" + nblance;
         
-        if (party % 2 == 0) { nblance=1; } 
-        else if (party % 2 != 0) { nblance = 2; }
+        /*if (nblance % 2 == 0) { nblance=1; } 
+        else if (party % 2 != 0) { nblance = 2; }*/
+
+        //DERNIER FRAME
         
        
         if (lance == false)
