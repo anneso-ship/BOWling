@@ -600,12 +600,6 @@ ScriptsOnlyBuild:
     className: ContentSizeFitter
   - hash:
       serializedVersion: 2
-      Hash: ba63206a9561bcd327d867f6a43225dc
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ScoreCounter
-  - hash:
-      serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
