@@ -41,7 +41,8 @@ public class balle : MonoBehaviour
        ball.transform.position = new Vector3(26.94381f, 24.81796f, -275.39f);
        lance = false;
        if (nblance % 2 != 0) { frame++; }
-       if(nblance == 22) { 
+       if (nblance >= 19 && nblance <= 21) { frame = 10; }
+       if (nblance == 22) { 
             scoreText.text = ""+score.scoreCalculation();
             scorePanel.SetActive(false);
             gameOption.EndGame(); 

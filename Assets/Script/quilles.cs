@@ -44,7 +44,7 @@ public class quilles : MonoBehaviour
         if (Vector3.Dot(transform.up, Vector3.up) < 0.95)
         {
             GameManager.Instance.count++; //on ajoute 1 au compteur de quilles couchées
-            _mat.SetColor("_Color", Color.green);
+            _mat.SetColor("_Color", Color.red);
 
             this.enabled = false; //La quille est maintenant couchée, on arrête complètement le script, il n'est plus utile.
         }
