@@ -23,7 +23,7 @@ public class balle : MonoBehaviour
     public bool reset = false;
     public Scorer score;
 
-
+    public AudioSource RollingBall;
     public Text scoreText;
     public GameOptions gameOption;
     public GameObject scorePanel;
@@ -44,7 +44,7 @@ public class balle : MonoBehaviour
        if (nblance >= 19 && nblance <= 21) { frame = 10; }
        if (nblance == 22) { 
             scoreText.text = ""+score.scoreCalculation();
-            scorePanel.SetActive(false);
+            scorePanel.SetActive(true);
             gameOption.EndGame(); 
        }
     }
@@ -56,6 +56,7 @@ public class balle : MonoBehaviour
             resetBallPosition();
             GameManager.Instance.count = 0;
             blocked.SetActive(true);
+            RollingBall.Pause();
             reset = true;
         }
     }
@@ -64,7 +65,7 @@ public class balle : MonoBehaviour
     private void Update()
     {
         frameAff.text = "FRAME " + frame + ", " + " lancé :" + nblance;
-        
+        if(nblance == 22) { frameAff.text = ""; GameManager.Instance.PartyRes.text = ""; }
         /*if (nblance % 2 == 0) { nblance=1; } 
         else if (party % 2 != 0) { nblance = 2; }*/
 
@@ -83,10 +84,14 @@ public class balle : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {   //Lancer la balle
             lance = true;
-            rb.AddForce(ballPosition.x, 0, 10000);
+            rb.AddForce(ballPosition.x, 0, 25000);
             blocked.SetActive(false);
             blocked_1.SetActive(false);
             blocked_2.SetActive(false);
+            RollingBall.Play();
         }
+
+
+
     }
 }

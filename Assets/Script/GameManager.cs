@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     public Text quilleDown;
     public int _count;
 
-    
+    public AudioSource Strike;
 
     private void Awake() { Instance = this; }
 
@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
     public int Result( int numberParty,int a, int b, int c)
     {
         //STRIKE
-        if(numberParty % 2!=0 && a == 10) { ResultParty = CaseParty[0,numberParty]; PartyRes.text = "STRIKE !!"; }
+        if(numberParty % 2!=0 && a == 10) { ResultParty = CaseParty[0,numberParty]; PartyRes.text = "STRIKE !!"; Strike.Play();  }
 
         else if (numberParty%2 == 0) {
             //SPARE

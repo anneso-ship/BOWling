@@ -83,6 +83,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 104
@@ -450,7 +454,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerIntField
   - hash:
       serializedVersion: 2
-      Hash: 10026d7afe789e0e6504743d028be182
+      Hash: 85e1d7af0ab0e8bb1dbcbbbdc30d0f4b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameOptions
@@ -624,7 +628,7 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: e28ed929c25e249137065fe956607e4a
+      Hash: 513d80957896f21083a184fa71ec5f70
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FollowBall
@@ -648,7 +652,7 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
-      Hash: 799f02fadb26c3e6195b377bc5fceb07
+      Hash: 36f500483ab29203beea39a3ed3f96cc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -876,7 +880,7 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: 45d7a4833579410207751b0e6752aae0
+      Hash: 62a98aab4d4e0b48634219c1516763ff
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: balle

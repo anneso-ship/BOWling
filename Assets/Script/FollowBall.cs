@@ -6,15 +6,19 @@ public class FollowBall : MonoBehaviour
 {
     public GameObject ball;
     public Vector3 decalage;
+    public AudioSource music;
     // Start is called before the first frame update
     void Start()
     {
-        decalage = new Vector3(-0.8f, 35.0f, -195f);
+        music.Play();
+        
+        decalage = new Vector3(-0.8f, 35.0f, -125f);
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         transform.position = ball.transform.position + decalage;
     }
 }

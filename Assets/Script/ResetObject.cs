@@ -65,13 +65,12 @@ public class ResetObject : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Ball.nblance % 2 != 0 && Ball.reset == true)
+        if ( (Ball.nblance % 2 != 0 && Ball.reset == true) || ( Ball.nblance >= 19 && Ball.reset == true) )
         {
             resetTransform();
             Ball.reset = false;
             GameManager.Instance.ResetGame();
         }
-
         if (Input.GetKeyDown(KeyCode.Space))
         {
             blocked();

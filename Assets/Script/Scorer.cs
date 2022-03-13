@@ -33,7 +33,7 @@ public class Scorer : MonoBehaviour
             if (b == 10)
             {
                 scores_text[i].text = "X";
-                
+                scores_text[i+1].text = " ";
             }
             else
             {
@@ -43,11 +43,7 @@ public class Scorer : MonoBehaviour
         }
         else if (a % 2 == 0)
         {
-            if (b == 10)
-            {
-                scores_text[i].text = " ";
-            }
-            if (b+c  == 10 )
+            if (b+c  == 10 && b<10 && c<10)
             {
                 scores_text[i].text = "/";
             }
@@ -56,11 +52,22 @@ public class Scorer : MonoBehaviour
                 scores_text[i].text = frameRes[i].ToString();
             }
         }
-        if (d > 0)
+
+        if (a >= 19)
         {
+            if (b == 10) { scores_text[i].text = "X"; }
+            if (b < 10) { scores_text[i].text = frameRes[i].ToString(); }
+
+           
+
+            if (c == 10) { scores_text[i].text = "X"; }
+            if (c < 10) { scores_text[i].text = frameRes[i].ToString(); }
+
             if (d == 10) { scores_text[i].text = "X"; }
             if (d < 10) { scores_text[i].text = frameRes[i].ToString(); }
         }
+
+        
     }
 
     void ScoreFind()
@@ -130,10 +137,10 @@ public class Scorer : MonoBehaviour
 
         //F10 Résultats :
         else if (Ball.frame == 10) {// A MODIFIER
-            if ( Ball.nblance == 19) { frameRes[18] = GameManager.Instance.count; ScoreDisplay(Ball.nblance, frameRes[18], 0, 18, 0); }
-            if (  Ball.nblance == 20) { frameRes[19] = GameManager.Instance.count; ScoreDisplay(Ball.nblance, frameRes[18], frameRes[19], 19, 0); }
-            if ( Ball.nblance == 21) { frameRes[20] = GameManager.Instance.count; ScoreDisplay(Ball.nblance, 0, 0, 20, frameRes[20]); }
-            GameManager.Instance.Result(Ball.nblance, frameRes[18], frameRes[19], frameRes[20]);
+            if ( Ball.nblance == 19) { frameRes[18] = GameManager.Instance.count; ScoreDisplay(Ball.nblance, frameRes[18], 0, 18, 0); GameManager.Instance.Result(Ball.nblance, frameRes[18], frameRes[19], 0); }
+            if (  Ball.nblance == 20) { frameRes[19] = GameManager.Instance.count; ScoreDisplay(Ball.nblance, frameRes[18], frameRes[19], 19, 0); GameManager.Instance.Result(Ball.nblance,0, frameRes[19], frameRes[20]); }
+            if ( Ball.nblance == 21) { frameRes[20] = GameManager.Instance.count; ScoreDisplay(Ball.nblance, 0,0, 20, frameRes[20]); GameManager.Instance.Result(Ball.nblance, 0, 0, frameRes[20]); }
+            //GameManager.Instance.Result(Ball.nblance, frameRes[18], frameRes[19], frameRes[20]);
         }
 
     }
