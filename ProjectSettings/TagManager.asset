@@ -9,6 +9,7 @@ TagManager:
   - bloc8
   - underGround
   - Bowling_alley
+  - AutomaticWall
   layers:
   - Default
   - TransparentFX

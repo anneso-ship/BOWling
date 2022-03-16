@@ -22,17 +22,18 @@ public class balle : MonoBehaviour
     public GameObject blocked_2;
     public bool reset = false;
     public Scorer score;
-
     public AudioSource RollingBall;
     public Text scoreText;
     public GameOptions gameOption;
     public GameObject scorePanel;
     private void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        //rb = GetComponent<Rigidbody>().isKinematic;
+        GetComponent<Rigidbody>().isKinematic = false;
         frame = 1;
         nblance = 1;
         blocked.SetActive(true);
+      //  Disabled();
     }
 
     public void resetBallPosition()
@@ -53,15 +54,22 @@ public class balle : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("underGround"))
         {
+            this.enabled = true ;
             resetBallPosition();
             GameManager.Instance.count = 0;
             blocked.SetActive(true);
-            RollingBall.Pause();
+            //RollingBall.Pause();
             reset = true;
         }
     }
 
-
+    /*void Disabled()
+    {
+        if (Input.GetMouseButton(1))
+        {
+            gameObject.GetComponent<Rigidbody>().isKinematic = true;
+        }
+    }*/
     private void Update()
     {
         frameAff.text = "FRAME " + frame + ", " + " lancé :" + nblance;
@@ -81,15 +89,19 @@ public class balle : MonoBehaviour
             blocked_1.SetActive(true);
             blocked_2.SetActive(true);
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetMouseButtonDown(0))
         {   //Lancer la balle
-            lance = true;
-            rb.AddForce(ballPosition.x, 0, 25000);
-            blocked.SetActive(false);
-            blocked_1.SetActive(false);
-            blocked_2.SetActive(false);
-            RollingBall.Play();
+            
+                lance = true;
+                rb.AddForce(ballPosition.x, 0, 5500);
+                blocked.SetActive(false);
+                blocked_1.SetActive(false);
+                blocked_2.SetActive(false);
+                //RollingBall.Play();
+            
         }
+
+        
 
 
 

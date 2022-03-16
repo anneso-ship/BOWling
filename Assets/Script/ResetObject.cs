@@ -71,7 +71,7 @@ public class ResetObject : MonoBehaviour
             Ball.reset = false;
             GameManager.Instance.ResetGame();
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetMouseButton(0))
         {
             blocked();
         }
