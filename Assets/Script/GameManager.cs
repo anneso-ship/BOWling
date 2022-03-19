@@ -7,15 +7,9 @@ public class GameManager : MonoBehaviour
 {
     public int numberFrame = 0;
     public int numberCase = 0;
-    public int ResultParty = 0;
     public Text PartyRes;
     public balle Ball;
     ResetObject resposQuille ;
-    public int[,] CaseParty = new int[3, 21] {
-       /*STRIKE*/ { 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1}, 
-       /*SPARE*/  { 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 2},
-       /*TROU*/   { 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 3}
-    };
     public static GameManager Instance;
     public List<quilles> Quilles = new List<quilles>();//Liste de quilles
     public Text quilleDown;
@@ -43,19 +37,18 @@ public class GameManager : MonoBehaviour
         quilleDown.text = "" + count;
     }
 
-    public int Result( int numberParty,int a, int b, int c)
+    public void Result( int numberParty,int a, int b, int c)
     {
         //STRIKE
-        if(numberParty % 2!=0 && a == 10) { ResultParty = CaseParty[0,numberParty]; PartyRes.text = "STRIKE !!"; Strike.Play();  }
+        if(numberParty % 2!=0 && a == 10) { PartyRes.text = "STRIKE !!"; Strike.Play();  }
 
         else if (numberParty%2 == 0) {
             //SPARE
-            if (a+b == 10) { ResultParty = CaseParty[1, numberParty]; PartyRes.text = "SPARE !!"; }
+            if (a+b == 10) { PartyRes.text = "SPARE !!"; }
 
             //TROU
-            if (a+b+c < 10) { ResultParty = CaseParty[2, numberParty]; PartyRes.text = "TROU !!"; }
+            if (a+b+c < 10) { PartyRes.text = "TROU !!"; }
         }
-        return ResultParty;
     }
 
       public void ResetGame() 

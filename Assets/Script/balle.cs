@@ -26,14 +26,32 @@ public class balle : MonoBehaviour
     public Text scoreText;
     public GameOptions gameOption;
     public GameObject scorePanel;
+
+    public Transform theBall;
+
+    public int power;
+
+
+    private void Awake()
+    {
+        theBall.GetComponent<Rigidbody>().isKinematic = false;
+    }
+
     private void Start()
     {
         //rb = GetComponent<Rigidbody>().isKinematic;
-        GetComponent<Rigidbody>().isKinematic = false;
+        
         frame = 1;
         nblance = 1;
         blocked.SetActive(true);
+       
       //  Disabled();
+    }
+
+    void deblocked()
+    {
+        if (Input.GetKeyDown(KeyCode.M)) { theBall.GetComponent<Rigidbody>().isKinematic = true; }
+     
     }
 
     public void resetBallPosition()
@@ -50,16 +68,38 @@ public class balle : MonoBehaviour
        }
     }
 
+    public void ResetBallPositionForButton()
+    {
+        
+            if(/*GameManager.Instance.count == 0 &&*/ nblance %2 ==0 && score.frameRes[nblance-2]==10)
+            {
+                power = 0;
+                this.enabled = true;
+                resetBallPosition();
+                GameManager.Instance.count = 0;
+                blocked.SetActive(true);
+                //RollingBall.Pause();
+                reset = true;
+            }
+            else
+            {
+                Debug.Log("TU NAS PAS FAIS DE STRIKE !!!!!");
+            }
+        
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("underGround"))
         {
+            power = 0;
             this.enabled = true ;
             resetBallPosition();
             GameManager.Instance.count = 0;
             blocked.SetActive(true);
             //RollingBall.Pause();
             reset = true;
+
         }
     }
 
@@ -88,16 +128,23 @@ public class balle : MonoBehaviour
             blocked.SetActive(true);
             blocked_1.SetActive(true);
             blocked_2.SetActive(true);
+            this.enabled = true;
         }
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Space))
         {   //Lancer la balle
-            
+            power++;
+            if (power < 2)
+            {
                 lance = true;
-                rb.AddForce(ballPosition.x, 0, 5500);
+                rb.AddForce(ballPosition.x, 0, 85000);
                 blocked.SetActive(false);
                 blocked_1.SetActive(false);
                 blocked_2.SetActive(false);
                 //RollingBall.Play();
+            }else
+            {
+                if (power == 2) { this.enabled = false; }
+            }
             
         }
 

@@ -12,7 +12,7 @@ public class FollowBall : MonoBehaviour
     {
         music.Play();
         
-        decalage = new Vector3(-0.8f, 25.0f, -125f);
+        decalage = new Vector3(-0.8f, 25.0f, -130f);
     }
 
     // Update is called once per frame

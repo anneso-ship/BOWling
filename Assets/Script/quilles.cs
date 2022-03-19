@@ -41,7 +41,7 @@ public class quilles : MonoBehaviour
        * si le Up de la quille est dans la même direction que le Up du monde, le produit sera de 1
        * donc si au bout de X seconde, on a un résulta inférieur à 1, la quille n'est plus à la verticale
        */
-        if (Vector3.Dot(transform.up, Vector3.up) < 0.95)
+        if (Vector3.Dot(transform.up, Vector3.up) < 0.9)
         {
             GameManager.Instance.count++; //on ajoute 1 au compteur de quilles couchées
             _mat.SetColor("_Color", Color.red);
